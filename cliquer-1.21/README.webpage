@@ -1,0 +1,58 @@
+Cliquer - routines for clique searching
+
+https://users.aalto.fi/~pat/cliquer.html
+
+Summary
+
+Cliquer is a set of C routines for finding cliques in an arbitrary weighted graph. It uses an exact branch-and-bound algorithm developed by Patric Östergård. It is designed with the aim of being efficient while still being flexible and easy to use.
+
+Cliquer was developed on Linux, and it should compile without modification on most modern UNIX systems. Other operating systems may require minor changes to the source code.
+Features
+
+The main features of Cliquer include:
+
+    support for both weighted and unweighted graphs (faster routines for unweighted graphs)
+    search for maximum cliques / maximum-weight cliques
+    search for cliques with size / weight within a given range
+    restrict the search to maximal cliques
+    store cliques in memory
+    call a user-defined function for every clique found
+    Cliquer is re-entrant, so you can use the clique-searching functions from within the callback function 
+
+You can read the complete documentation in the User's Guide, which is available in electronic and printed form.
+Download
+
+The current version 1.21 was released in early 2010. (In version 1.2 a bug that corrupted weighted graphs in the function reorder_graph was fixed. If you have not been using the function reorder_graph or you have used reorder_graph for unweighted graphs (in earlier versions), then this bug has not affected your computations. In version 1.1 a few bugs related to the auxiliary graph and set resizing functions were fixed.)
+
+Source: cliquer-1.21.tar.gz
+
+The User's Guide has appeared as a technical report.
+
+Sampo Niskanen and Patric R. J. Östergård, "Cliquer User's Guide, Version 1.0," Communications Laboratory, Helsinki University of Technology, Espoo, Finland, Tech. Rep. T48, 2003.
+You may refer to this report if you use Cliquer in your scientific work. If you want a printed copy of it, please contact us at the address below. For an electronic copy of the User's Guide: cover, front matter, text, back matter.
+
+We make a few example programs available. The first two programs are described in the User's Guide, and instructions for the third program can be found in the beginning of the program file.
+
+    basic.c
+    hamming.c
+    poly.c (needs tetromino.h) 
+
+License
+
+Cliquer is licensed under the GNU General Public License. Basically, you can use Cliquer for any purpose, provided that any programs or modifications you make and distribute are also licensed under the GNU GPL.
+
+Absolutely no guarantees or warranties are made concerning the suitability, correctness, or any other aspect of these routines.
+
+Copyright © 2002 Sampo Niskanen, Patric Östergård.
+Author
+
+Cliquer was mainly written by Sampo Niskanen, sampo.niskanenQiki.fi (Q=@).
+
+For bug-fixes, feedback, and, in particular, for putting your name on the mailing list for important information regarding Cliquer, please contact:
+
+Patric Östergård
+Department of Communications and Networking
+Aalto University
+P.O. Box 13000, 00076 Aalto
+FINLAND
+patric.ostergardQaalto.fi (Q=@)
